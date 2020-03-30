@@ -48,12 +48,14 @@ RUN apt-get -qq install -y \
     wget \
     procps \
     python-ldap
-RUN apt-get install -y default-jdk
+RUN apt-get -qq install -y default-jdk
 
 RUN apt-get -qq install -y mc
 
 # Instalace vlastního Apache DS
-COPY deb/${ARCHIVE} .
+# http://mirror.hosting90.cz/apache/directory/apacheds/dist/2.0.0.AM26/apacheds-2.0.0.AM26-amd64.deb
+# COPY deb/${ARCHIVE} .
+RUN wget http://mirror.hosting90.cz/apache/directory/apacheds/dist/${VERSION}/${ARCHIVE}
 RUN chmod +x ${ARCHIVE} && \
     dpkg -i  ${ARCHIVE} && \
     rm ${ARCHIVE}
