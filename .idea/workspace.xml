@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad7aa270-efd3-42a1-ae0f-4d4aaf115750" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/rjaeg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/idam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ds/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ds/config-sav.ldif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fortress/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ds/bin/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/clear" beforeDir="false" afterPath="$PROJECT_DIR$/ds/bin/clear" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/group" beforeDir="false" afterPath="$PROJECT_DIR$/ds/bin/group" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/initialize" beforeDir="false" afterPath="$PROJECT_DIR$/ds/bin/initialize" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ldapmanager" beforeDir="false" afterPath="$PROJECT_DIR$/ds/bin/ldapmanager" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/search" beforeDir="false" afterPath="$PROJECT_DIR$/ds/bin/search" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/user" beforeDir="false" afterPath="$PROJECT_DIR$/ds/bin/user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deb/apacheds-2.0.0.AM26-amd64.deb" beforeDir="false" afterPath="$PROJECT_DIR$/ds/deb/apacheds-2.0.0.AM26-amd64.deb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/cache/.placeholder" beforeDir="false" afterPath="$PROJECT_DIR$/ds/scripts/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/conf/config.ldif" beforeDir="false" afterPath="$PROJECT_DIR$/ds/instance/config.ldif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/conf/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ds/instance/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/conf/wrapper-instance.conf" beforeDir="false" afterPath="$PROJECT_DIR$/ds/instance/wrapper-instance.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/log/.placeholder" beforeDir="false" afterPath="$PROJECT_DIR$/ds/sysnet.ldif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/partitions/.placeholder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/run/.placeholder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/syncrepl-data/.placeholder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/apacheds-2.0.0.AM26-production" beforeDir="false" afterPath="$PROJECT_DIR$/ds/scripts/apacheds-2.0.0.AM26-production" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ZqKtSLwyAqMiwmnNLuRsIINN7h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ds" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\development\git\idam\ds" />
+      <recent name="D:\development\git\idam\fortress" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\development\git\idam\ds" />
+      <recent name="D:\development\git\idam\instance" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad7aa270-efd3-42a1-ae0f-4d4aaf115750" name="Default Changelist" comment="" />
+      <created>1585561398808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585561398808</updated>
+      <workItem from="1585561400449" duration="16360000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="717" y="381" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585571818962">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="717" y="381" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1585571818962" />
+    <state x="460" y="221" key="SettingsEditor" timestamp="1585569795309">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="460" y="221" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1585569795309" />
+  </component>
+</project>

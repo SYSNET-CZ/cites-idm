@@ -1,0 +1,23 @@
+version: 1
+
+dn: dc=cz
+objectClass: extensibleObject
+objectClass: domain
+objectClass: top
+dc: cz
+
+dn: dc=sysnet,dc=cz
+objectClass: extensibleObject
+objectClass: domain
+objectClass: top
+dc: sysnet
+
+dn: ou=Users,dc=sysnet,dc=cz
+objectClass: organizationalUnit
+objectClass: top
+ou: Users
+
+dn: ou=Groups,dc=sysnet,dc=cz
+objectClass: organizationalUnit
+objectClass: top
+ou: Groups

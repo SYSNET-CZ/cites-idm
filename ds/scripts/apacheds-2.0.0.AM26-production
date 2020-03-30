@@ -20,7 +20,7 @@
 
 # *** Linux Standard Base Information ***
 ### BEGIN INIT INFO
-# Provides: apacheds
+# Provides: ds
 # Required-Start: $local_fs $remote_fs $network $syslog
 # Required-Stop: $local_fs $remote_fs $network $syslog
 # Default-Start: 2 3 4 5
@@ -33,4 +33,4 @@
 # description: Start and stop ApacheDS
 
 # Forwarding the command to the default script
-/opt/apacheds-2.0.0.AM26/bin/apacheds $1 production
+${APACHEDS_PROGRAM_DIR}/bin/apacheds $1 ${APACHEDS_INSTANCE}
