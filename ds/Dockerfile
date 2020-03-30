@@ -55,7 +55,7 @@ RUN apt-get -qq install -y mc
 # Instalace vlastního Apache DS
 # http://mirror.hosting90.cz/apache/directory/apacheds/dist/2.0.0.AM26/apacheds-2.0.0.AM26-amd64.deb
 # COPY deb/${ARCHIVE} .
-RUN wget http://mirror.hosting90.cz/apache/directory/apacheds/dist/${VERSION}/${ARCHIVE}
+RUN wget -nv --show-progress --progress=bar:force:noscroll http://mirror.hosting90.cz/apache/directory/apacheds/dist/${VERSION}/${ARCHIVE}
 RUN chmod +x ${ARCHIVE} && \
     dpkg -i  ${ARCHIVE} && \
     rm ${ARCHIVE}
@@ -69,10 +69,11 @@ RUN chmod u+rx /etc/init.d/${SCRIPT}
 RUN ln -s /etc/init.d/${SCRIPT} /etc/init.d/apacheds
 
 # Spouštěcí skripty dumb init
-RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64
+RUN wget -nv --show-progress --progress=bar:force:noscroll -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64
 RUN chmod +x /usr/local/bin/dumb-init
 ADD scripts/run.sh run.sh
 RUN chown ${USER}:${GROUP} run.sh && chmod u+rx run.sh
+RUN ln -s ${PROGRAM_DIR}/run.sh /run.sh
 
 # Vytvoření šablony instance
 ADD instance/* ${BOOTSTRAP}/conf/
@@ -109,5 +110,5 @@ RUN curl -L -o /usr/local/bin/dumb-init \
     https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64 && \
     chmod +x /usr/local/bin/dumb-init
 
-ENTRYPOINT ["run.sh"]
+ENTRYPOINT ["/run.sh"]
 # CMD /bin/bash
