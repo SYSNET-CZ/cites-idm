@@ -100,7 +100,7 @@ RUN mkdir ${INSTANCE_DIR}/cache \
 EXPOSE 10389 10636 60088 60464 8080 8443
 
 # Correct for hard-coded INSTANCES_DIRECTORY variable
-RUN sed -i "s#/var/lib/apacheds-${VERSION}#/var/lib/apacheds#" /opt/apacheds-${VERSION}/bin/apacheds
+# RUN sed -i "s#/var/lib/apacheds-${VERSION}#/var/lib/apacheds#" /opt/apacheds-${VERSION}/bin/apacheds
 
 # Instalace dumb-init
 RUN curl -L -o /usr/local/bin/dumb-init \

@@ -31,7 +31,7 @@ cleanup(){
 trap cleanup EXIT
 cleanup
 
-/opt/apacheds-${APACHEDS_VERSION}/bin/apacheds start ${APACHEDS_INSTANCE}
+${APACHEDS_PROGRAM_DIR}/bin/apacheds start ${APACHEDS_INSTANCE}
 sleep 2  # Wait on new pid
 
 shutdown(){
