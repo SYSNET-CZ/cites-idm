@@ -6,17 +6,17 @@ services:
     container_name: ldap
     restart: always
     environment:
-      - APACHEDS_VERSION=2.0.0.AM26
-      - APACHEDS_ARCH=amd64
-      - APACHEDS_ARCHIVE=apacheds-${APACHEDS_VERSION}-${APACHEDS_ARCH}.deb
-      - APACHEDS_PROGRAM_DIR=/opt/apacheds-${APACHEDS_VERSION}
-      - APACHEDS_DATA_DIR=/var/lib/apacheds-${APACHEDS_VERSION}
-      - APACHEDS_USER=apacheds
-      - APACHEDS_GROUP=apacheds
-      - APACHEDS_INSTANCE=production
-      - APACHEDS_INSTANCE_DIR=${APACHEDS_DATA_DIR}/${APACHEDS_INSTANCE}
+      - APACHEDS_VERSION=${DS_VERSION}
+      - APACHEDS_ARCH=${DS_ARCH}
+      - APACHEDS_ARCHIVE=apacheds-${DS_VERSION}-${DS_ARCH}.deb
+      - APACHEDS_PROGRAM_DIR=${DS_PROGRAM_DIR}
+      - APACHEDS_DATA_DIR=${DS_DATA_DIR}
+      - APACHEDS_USER=${DS_USER}
+      - APACHEDS_GROUP=${DS_GROUP}
+      - APACHEDS_INSTANCE=${DS_INSTANCE}
+      - APACHEDS_INSTANCE_DIR=${DS_INSTANCE_DIR}
     volumes:
-      - instance:${APACHEDS_INSTANCE_DIR}
+      - instance:${DS_INSTANCE_DIR}
     ports:
       - "10389:10389"
     networks:
@@ -57,7 +57,7 @@ services:
       - MP_MEM_MAX=2048M
       - MP_MEM_INIT=1024M
       - MP_JAVA_OPTS
-      - TIMEZONE
+      - TIMEZONE=Europe/Prague
     networks:
       - default
     secrets:

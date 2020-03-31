@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad7aa270-efd3-42a1-ae0f-4d4aaf115750" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rjaeg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rjaeg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
@@ -46,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585561398808</updated>
-      <workItem from="1585561400449" duration="28349000" />
+      <workItem from="1585561400449" duration="29256000" />
     </task>
     <servers />
   </component>
@@ -54,10 +56,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="717" y="381" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585651689891">
+    <state x="717" y="381" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585653331478">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="717" y="381" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1585651689891" />
+    <state x="717" y="381" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160/1920.0.1920.1160@0.0.1920.1160" timestamp="1585653331478" />
     <state x="460" y="221" key="SettingsEditor" timestamp="1585569795309">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
