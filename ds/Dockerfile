@@ -62,6 +62,7 @@ RUN chmod +x ${ARCHIVE} && \
 
 # Ovládací skripty
 ADD bin /usr/local/bin
+RUN chmod +x /usr/local/bin/* && chmod -x /usr/local/bin/*.md
 
 # Spouštěcí skripty - služba nefunguje
 ADD scripts/${SCRIPT}  /etc/init.d/${SCRIPT}

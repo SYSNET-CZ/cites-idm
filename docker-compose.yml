@@ -1,0 +1,86 @@
+version: '3.3'
+
+services:
+  ldap:
+    image: sysnetcz/apacheds
+    container_name: ldap
+    restart: always
+    environment:
+      APACHEDS_VERSION: 2.0.0.AM26
+      APACHEDS_ARCH: amd64
+      APACHEDS_ARCHIVE: apacheds-${APACHEDS_VERSION}-${APACHEDS_ARCH}.deb
+      APACHEDS_PROGRAM_DIR: /opt/apacheds-${APACHEDS_VERSION}
+      APACHEDS_DATA_DIR: /var/lib/apacheds-${APACHEDS_VERSION}
+      APACHEDS_USER: apacheds
+      APACHEDS_GROUP: apacheds
+      APACHEDS_INSTANCE: production
+      APACHEDS_INSTANCE_DIR: ${APACHEDS_DATA_DIR}/${APACHEDS_INSTANCE}
+    volumes:
+      - instance:${APACHEDS_INSTANCE_DIR}
+    ports:
+    - "10389:10389"
+    networks:
+      - default
+
+  idm_db:
+    image: postgres:12.2
+    container_name: idm_db
+    environment:
+      - POSTGRES_PASSWORD_FILE=/run/secrets/mp_database_password.txt
+      - POSTGRES_USER=midpoint
+      - POSTGRES_INITDB_ARGS=--lc-collate=cs_CZ.utf8 --lc-ctype=cs_CZ.utf8
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+    secrets:
+      - mp_database_password.txt
+    volumes:
+      - idm_data:/var/lib/postgresql/data
+
+  idm:
+    image: evolveum/midpoint:latest
+    container_name: midpoint
+    depends_on:
+      - idm_db
+    ports:
+      - "8080:8080"
+    environment:
+      - REPO_DATABASE_TYPE=postgresql
+      - REPO_HOST=idm_db
+      - REPO_DATABASE=midpoint
+      - REPO_USER=midpoint
+      - REPO_PASSWORD_FILE=/run/secrets/mp_database_password.txt
+      - REPO_MISSING_SCHEMA_ACTION=create
+      - REPO_UPGRADEABLE_SCHEMA_ACTION=upgrade
+      - MP_KEYSTORE_PASSWORD_FILE=/run/secrets/mp_keystore_password.txt
+      - MP_MEM_MAX=2048M
+      - MP_MEM_INIT=1024M
+      - MP_JAVA_OPTS
+      - TIMEZONE
+    networks:
+      - default
+    secrets:
+      - mp_database_password.txt
+      - mp_keystore_password.txt
+    volumes:
+      - idm_home:/opt/midpoint/var
+
+secrets:
+  mp_database_password.txt:
+    file: ./configs-and-secrets/midpoint/database_password.txt
+  mp_keystore_password.txt:
+    file: ./configs-and-secrets/midpoint/keystore_password.txt
+
+volumes:
+  instance:
+    driver: local
+  idm_data:
+    driver: local
+  idm_home:
+    driver: local
+
+networks:
+  default:
+    external:
+      name: elk_elastic
