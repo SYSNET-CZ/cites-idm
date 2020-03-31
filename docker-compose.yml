@@ -26,10 +26,9 @@ services:
     image: postgres:12.2
     container_name: idm_db
     environment:
-      - LANG=cs_CZ.UTF-8
       - POSTGRES_PASSWORD_FILE=/run/secrets/mp_database_password.txt
       - POSTGRES_USER=midpoint
-      - POSTGRES_INITDB_ARGS=--lc-collate=cs_CZ.utf8 --lc-ctype=cs_CZ.utf8
+      - POSTGRES_INITDB_ARGS=--lc-collate=en_US.utf8 --lc-ctype=en_US.utf8
     ports:
       - "5432:5432"
     networks:
