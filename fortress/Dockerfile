@@ -29,7 +29,7 @@ ENV FORTRESS_HOME=${HOME_DIR}
 WORKDIR ${HOME_DIR}
 
 RUN git clone  https://gitbox.apache.org/repos/asf/directory-fortress-core.git
-RUN cd directory-fortress-core
+RUN cd ${HOME_DIR}/directory-fortress-core
 COPY build.properties .
 RUN mvn clean install
 RUN mvn install -Dload.file=./ldap/setup/refreshLDAPData.xml
